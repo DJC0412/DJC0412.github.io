@@ -1,0 +1,41 @@
+I"*
+<p>1， 打开终端：</p>
+<blockquote>
+  <p>sudo apt-get install mysql-server</p>
+</blockquote>
+
+<p>2 ，接下来会让你选择y/n, 这里你选择y,</p>
+
+<p>3 ，这里会出现一个让你输入mysql-server的密码，输入完后如果鼠标点击不了，可以使用Tab键+enter键继续下一步</p>
+
+<p>4 ，接下来，会继续让我们输入一次密码</p>
+
+<p>5， 密码输入完后，我们这里的mysql-server的用户名是：root ，密码是我们刚刚设置过的密码，</p>
+
+<p>6， 这时候已经安装完成了，我们需要验证一下是否安装上了mysql-server</p>
+<blockquote>
+  <p>mysql -u root -p</p>
+</blockquote>
+
+<p>按enter键后会让我们输入密码，当我们输入密码后，会出现：</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">snakeson</span><span class="p">@</span><span class="nd">snakeson</span><span class="o">-</span><span class="nx">Inspiron</span><span class="o">-</span><span class="mi">5421</span><span class="p">:</span><span class="o">~</span><span class="nx">$</span> <span class="nx">mysql</span> <span class="o">-</span><span class="nx">u</span> <span class="nx">root</span> <span class="o">-</span><span class="nx">p</span>
+<span class="nx">Enter</span> <span class="nx">password</span><span class="p">:</span> 
+<span class="nx">Welcome</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">MySQL</span> <span class="nx">monitor</span><span class="p">.</span>  <span class="nx">Commands</span> <span class="nx">end</span> <span class="kd">with</span> <span class="p">;</span> <span class="nx">or</span> <span class="err">\</span><span class="nx">g</span><span class="p">.</span>
+<span class="nx">Your</span> <span class="nx">MySQL</span> <span class="nx">connection</span> <span class="nx">id</span> <span class="nx">is</span> <span class="mi">5</span>
+<span class="nx">Server</span> <span class="nx">version</span><span class="p">:</span> <span class="mf">5.7</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">0</span><span class="nx">ubuntu0</span><span class="p">.</span><span class="mf">16.04</span><span class="p">.</span><span class="mi">1</span> <span class="p">(</span><span class="nx">Ubuntu</span><span class="p">)</span>
+
+<span class="nx">Copyright</span> <span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">2017</span><span class="p">,</span> <span class="nx">Oracle</span> <span class="nx">and</span><span class="o">/</span><span class="nx">or</span> <span class="nx">its</span> <span class="nx">affiliates</span><span class="p">.</span> <span class="nx">All</span> <span class="nx">rights</span> <span class="nx">reserved</span><span class="p">.</span>
+
+<span class="nx">Oracle</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">registered</span> <span class="nx">trademark</span> <span class="k">of</span> <span class="nx">Oracle</span> <span class="nx">Corporation</span> <span class="nx">and</span><span class="o">/</span><span class="nx">or</span> <span class="nx">its</span>
+<span class="nx">affiliates</span><span class="p">.</span> <span class="nx">Other</span> <span class="nx">names</span> <span class="nx">may</span> <span class="nx">be</span> <span class="nx">trademarks</span> <span class="k">of</span> <span class="nx">their</span> <span class="nx">respective</span>
+<span class="nx">owners</span><span class="p">.</span>
+
+<span class="nx">Type</span> <span class="dl">'</span><span class="s1">help;</span><span class="dl">'</span> <span class="nx">or</span> <span class="dl">'</span><span class="se">\</span><span class="s1">h</span><span class="dl">'</span> <span class="k">for</span> <span class="nx">help</span><span class="p">.</span> <span class="nx">Type</span> <span class="dl">'</span><span class="se">\</span><span class="s1">c</span><span class="dl">'</span> <span class="nx">to</span> <span class="nx">clear</span> <span class="nx">the</span> <span class="nx">current</span> <span class="nx">input</span> <span class="nx">statement</span><span class="p">.</span>
+
+<span class="nx">mysql</span><span class="o">&gt;</span> 
+</code></pre></div></div>
+
+<p>7 ， 这样我们就在Ubuntu下安装好了mysql-server。</p>
+
+:ET

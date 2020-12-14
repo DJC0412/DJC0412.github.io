@@ -1,0 +1,12 @@
+I"u
+<p>1， 打开终端：</p>
+<blockquote>
+  <p>sudo apt-get install mysql-server</p>
+</blockquote>
+
+<p>2 ，接下来会让你选择y/n, 这里你选择y,</p>
+
+<p>3 ，这里会出现一个让你输入mysql-server的密码，输入完后如果鼠标点击不了，可以使用Tab键+enter键继续下一步</p>
+
+<p>4 ，接下来，会继续让我们输入一次密码</p>
+:ET
