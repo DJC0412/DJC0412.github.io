@@ -27,7 +27,7 @@ type: page
 
     CSS3 生成器
 
-- [tiny png](https://tinypng.com/)
+* [tiny png](https://tinypng.com/)
 
     用于压缩 png 或 jpg 的在线工具
 
