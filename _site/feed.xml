@@ -5,9 +5,23 @@
     <description></description>
     <link>http://localhost:4001/</link>
     <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Dec 2020 16:59:58 +0800</pubDate>
-    <lastBuildDate>Mon, 14 Dec 2020 16:59:58 +0800</lastBuildDate>
+    <pubDate>Tue, 15 Dec 2020 12:25:11 +0800</pubDate>
+    <lastBuildDate>Tue, 15 Dec 2020 12:25:11 +0800</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>MarkDown格式测试文档</title>
+        <description>文章外部可见文本</description>
+        <pubDate>Tue, 15 Dec 2020 19:35:54 +0800</pubDate>
+        <link>http://localhost:4001/2020/12/15/MarkDown/</link>
+        <guid isPermaLink="true">http://localhost:4001/2020/12/15/MarkDown/</guid>
+        
+        <category>标签</category>
+        
+        
+        <category>分类</category>
+        
+      </item>
     
       <item>
         <title>hello jekyll!</title>
