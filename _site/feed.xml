@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4001/</link>
     <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Dec 2020 12:59:01 +0800</pubDate>
-    <lastBuildDate>Tue, 15 Dec 2020 12:59:01 +0800</lastBuildDate>
+    <pubDate>Tue, 15 Dec 2020 15:26:59 +0800</pubDate>
+    <lastBuildDate>Tue, 15 Dec 2020 15:26:59 +0800</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -20,6 +20,34 @@
         
         
         <category>分类</category>
+        
+      </item>
+    
+      <item>
+        <title>JAVA学习笔记（二）</title>
+        <description>JAVA的基本语法</description>
+        <pubDate>Tue, 15 Dec 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2020/12/15/JAVA-Study-2/</link>
+        <guid isPermaLink="true">http://localhost:4001/2020/12/15/JAVA-Study-2/</guid>
+        
+        <category>JAVA</category>
+        
+        
+        <category>JAVA学习笔记</category>
+        
+      </item>
+    
+      <item>
+        <title>JAVA学习笔记（一）</title>
+        <description>万事开头难</description>
+        <pubDate>Tue, 15 Dec 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2020/12/15/JAVA-Study-1/</link>
+        <guid isPermaLink="true">http://localhost:4001/2020/12/15/JAVA-Study-1/</guid>
+        
+        <category>JAVA</category>
+        
+        
+        <category>JAVA学习笔记</category>
         
       </item>
     
