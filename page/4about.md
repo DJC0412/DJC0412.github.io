@@ -39,7 +39,7 @@ type: page
 
 ## 友情链接
 
-[百度](http://baidu.com) \| [必应](https://bing.com)
+[百度](http://baidu.com) \| [必应](https://bing.com) \| [徐齐胜的个人博客](https://qishengx.github.io)
 
 ## Comments
 
