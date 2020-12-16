@@ -1,134 +1,119 @@
-# About this Cool Concise Jekyll Blog Theme 🤘🤘🤘
+# 关于这个简洁明快的博客主题 🤘🤘🤘
 
-[![GitHub stars](https://img.shields.io/github/stars/Gaohaoyang/gaohaoyang.github.io.svg)](https://github.com/Gaohaoyang/gaohaoyang.github.io/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Gaohaoyang/gaohaoyang.github.io.svg)](https://github.com/Gaohaoyang/gaohaoyang.github.io/network)
-[![GitHub issues](https://img.shields.io/github/issues/Gaohaoyang/gaohaoyang.github.io.svg)](https://github.com/Gaohaoyang/gaohaoyang.github.io/issues)
-[![GitHub release](https://img.shields.io/github/release/Gaohaoyang/gaohaoyang.github.io.svg)](https://github.com/Gaohaoyang/gaohaoyang.github.io/releases)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Gaohaoyang/gaohaoyang.github.io/master/LICENSE)
+**博客访问地址：[http://gaohaoyang.github.io/](http://gaohaoyang.github.io/)**。若您喜欢这个新的博客主题，请给我个star以示鼓励吧，欢迎大家使用。
 
-**[中文版 Chinese README 请点击这里 🇨🇳](https://github.com/Gaohaoyang/gaohaoyang.github.io/blob/master/README-zh-cn.md)**
+## 目录
 
-With the escalation of jekyll version, but I also want to reconstruct my older blog theme, so I did reconstruction and added some features recently. My new blog theme will still be stored in this repository. I will also use this theme in the future. Now I have done basically, then I will focus on issues that users opend to make theme better.
-
-**My Blog Url: [http://gaohaoyang.github.io/](http://gaohaoyang.github.io/)**. If you like this theme, you can give me a star to encourage me. Welcome everyone to use it.
-
-## Content
-
-* [Preview](#preview)
-* [Page Details](#page-details)
-    * [Home](#home)
-    * [Archives](#archives)
-    * [Categories](#categories)
-    * [Tags](#tags)
-    * [Collections](#collections)
-    * [Demo](#demo)
-    * [About](#about)
-    * [Comments](#comments)
-    * [Post Contents](#post-contents)
-    * [Code Highlight](#code-highlight)
-    * [Light Shadow](#light-shadow)
-    * [Mobile Adaptation](#mobile-adaptation)
+* [各部分详情](#各部分详情)
+    * [主页 Home](#主页-home)
+    * [归档页 Archives](#归档页-archives)
+    * [分类页 Categories](#分类页-categories)
+    * [标签页 Tags](#标签页-tags)
+    * [收藏页 Collections](#收藏页-collections)
+    * [展示页 Demo](#展示页-demo)
+    * [关于页 About](#关于页-about)
+    * [评论](#评论)
+    * [目录 Contents](#目录-contents)
+    * [代码高亮](#代码高亮)
+    * [灯泡效果](#灯泡效果)
+    * [移动端适配](#移动端适配)
     * [Footer](#footer)
-    * [Statistical Analysis](#statistical-analysis)
-* [Usage](#usage)
-    * [1. Install ruby and jekyll environment](#1-install-ruby-and-jekyll-environment)
-    * [2. Copy theme code](#2-copy-theme-code)
-    * [3. Change parameter](#3-change-parameter)
-        * [Basic info](#basic-info)
-        * [Link info](#link-info)
-        * [Comments info](#comments-info)
-        * [Statistical analysis info](#statistical-analysis-info)
-    * [4. Write post](#4-write-post)
-    * [5. Local launch](#5-local-launch)
-    * [6. Push to GitHub](#6-push-to-github)
-* [Donate](#donate)
-* [Update Log](#update-log)
+    * [统计](#统计)
+* [博客主题使用方法](#博客主题使用方法)
+    * [1. 安装 ruby 和 jekyll 环境](#1-安装-ruby-和-jekyll-环境)
+    * [2. 复制博客主题代码](#2-复制博客主题代码)
+    * [3. 修改参数](#3-修改参数)
+        * [基本信息](#基本信息)
+        * [链接信息](#链接信息)
+        * [评论信息](#评论信息)
+        * [统计信息](#统计信息)
+    * [4. 写文章](#4-写文章)
+    * [5. 本地运行](#5-本地运行)
+    * [6. 发布到 GitHub](#6-发布到-github)
 * [License](#license)
 
-## Preview
+## 预览图
 
-First of all, let's see previews.
+先上预览图：
 
-Index Page
+主页
 ![index](http://ww3.sinaimg.cn/large/7011d6cfjw1f3bdli86awj211k0oyqen.jpg)
 
-Post Page
+文章页
 ![post](http://ww4.sinaimg.cn/large/7011d6cfjw1f3bdmzb9v6j210p0j7gwn.jpg)
 
-## Page Details
+## 各部分详情
 
-### Home
+### 主页 Home
 
-Index page show 5 posts excerpt as a default. Readers can click article title or read more button to see full post. There are recent posts area, categories area and tags area at the right part of the index page. You can also add an area at this part, if you change the file `index.html`.
+主页默认展示5篇文章的摘要部分，用户点击标题或阅读全文后进入文章页。右侧为近期文章、分类和标签3块区域，用户可以继续在这部分添加区域，只需修改`index.html`即可。
 
-### Archives
+### 归档页 Archives
 
-Archive post according to the year.
+按照年份归档文章。
 
-### Categories
+### 分类页 Categories
 
-Show posts according to the category.
+按照文章的分类，显示文章。
 
-### Tags
+### 标签页 Tags
 
-Show posts according to the tags.
+按照文章的标签显示文章。
 
-### Collections
+### 收藏页 Collections
 
-The user can collect their favorite article links with `markdown` syntax.
+本页是用`markdown`写的，用户可以收藏自己喜欢的文章链接。
 
-### Demo
+### 展示页 Demo
 
-I use *[Masonry](http://masonry.desandro.com/)* to rewrite the waterfall responsive layout. Better interactive experience.
+使用 [Masonry](http://masonry.desandro.com/) 重写了瀑布流布局，响应式布局，更好的交互体验。
 
-### About
+### 关于页 About
 
-The user can write some introduction about theirselves and their site with `markdown` syntax.
+对个人和对本站的介绍，使用`markdown`写的。
 
-### Comments
+### 评论
 
-This theme supports both [disqus](https://disqus.com/) and [多说评论 duoshuo comments](http://duoshuo.com/). It's very easy to config your comments module.
+支持 [多说评论](http://duoshuo.com/) 和 [disqus](https://disqus.com/) 评论。
 
-The only thing you need do is to change the `short_name` in the file `_config.yml`. As follows.
+只需要在 `_config.yml` 修改相应的配置`short_name`即可，如下：
 
 ```yml
 # comments
 # two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
 duoshuo_shortname: #xxx
 disqus_shortname: xxx
 ```
 
-### Post Contents
+### 目录 Contents
 
-The post contents is fixed at the right side while page is scrolling. There will be a scroll bar on contents while it is outside the window height.
+页面滚动时目录固定在屏幕右侧，若目录高度超出屏幕高度，目录产生滚动条。
 
-### Code Highlight
+### 代码高亮
 
-While the jekyll is update to 3.x.x, you can use github flavored markdown to write code.
+随着 jekyll 的升级，目前代码高亮使用风格与 github 上的 markdown 写法一致。
 
-More info to see [syntax-highlighter-changed](https://jekyllrb.com/docs/upgrading/2-to-3/#syntax-highlighter-changed).
-
-### Light Shadow
+### 灯泡效果
 
 ![light](http://ww3.sinaimg.cn/large/7011d6cfjw1f3be6y4vp3j209i02rweg.jpg)
 
-You can see the white shadow on the current item in the navbar. I call this light shadow.
+可以看到导航按钮高亮时，下面的阴影效果，我把这个称为灯泡效果。
 
-### Mobile Adaptation
+### 移动端适配
 
-Of course, I have done a very good mobile adaptation.
+完美适配移动端。
 
 ![mobile](http://ww4.sinaimg.cn/large/7011d6cfjw1f3bebnzxkpj20ah0fzgp4.jpg)
 
 ### Footer
 
-**Welcome to use this blog theme, but please keep the theme author info at footer.** Theme designed by [HyG](https://github.com/gaohaoyang).
-
+**欢迎使用这个主题，使用时请保留 footer 上的模板主题来源。** Theme designed by [HyG](https://github.com/gaohaoyang).
 ![footer](http://ww3.sinaimg.cn/large/7011d6cfjw1f3bepd8002j20hl02ct95.jpg)
 
-### Statistical Analysis
+### 统计
 
-This theme supports Google Analytics and Baidu Statistics， you can just config the id in the file `_config.yml`, as follows.
+博客支持百度统计和 Google Analytics，只需在`_config.yml`中配置响应的id即可，代码如下。
 
 ```yml
 # statistic analysis 统计代码
@@ -139,105 +124,107 @@ baidu_tongji_id: xxxxxxxxxxxx
 google_analytics_id: UA-xxxxxxxx # google 分析追踪id
 ```
 
-## Usage
+## 博客主题使用方法
 
-Welcome everyone to use this theme, this part shows introduction to use.
+欢迎使用这个主题，以下简单说一下使用方法。
 
-### 1. Install ruby and jekyll environment
+### 1. 安装 ruby 和 jekyll 环境
 
-This step and Step 5 mainly talk to you how to launch blog at local. If you don't want to launch at local, you can ignore these 2 steps. But I still strongly suggest to do this. Ensure there is nothing wrong before pushing to the github.
+这一步和第5步主要是为了让博客系统在本地跑起来，如果不想在本地运行，可以无视这两步，但我还是强烈建议试着先在本地跑起来，没有什么问题后再推送的 GitHub 上。
 
-The Windows users can directly use [RubyInstaller](http://rubyinstaller.org/) to install ruby environment. Follow the prompts while installing.
+Windows 用户可以直接使用 [RubyInstaller](http://rubyinstaller.org/) 安装 ruby 环境。后续的操作中可能还会提示安装 DevKit，根据提示操作即可。
 
-Install jekyll commands:
+建议使用 [RubyGems 镜像- Ruby China](https://gems.ruby-china.org/) 安装 jekyll。
+
+安装 jekyll 命令如下
 
 ```
 gem install jekyll
 ```
 
-For more details, you can view the jekyll official website. [https://jekyllrb.com/](https://jekyllrb.com/)
+详情可以查看 jekyll 官网。[https://jekyllrb.com/](https://jekyllrb.com/) 或 中文翻译版 jekyll 官网[http://jekyllcn.com/](http://jekyllcn.com/) （中文文档翻译落后于英文官网，有兴趣有时间的小伙伴可以参与翻译，为开源世界贡献一份力哦~）
 
-There may be something wrong at mac OS X El Capitan, you can see the solution at [https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011]( https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011).
+在 mac OS X El Capitan 系统下安装可能会出现问题，解决方案详情见 jekyll 官网: [ https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011]( https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011)
 
-If you are interesting in jekyll, you can see the jekyll source code at [https://github.com/jekyll/jekyll](https://github.com/jekyll/jekyll).
+对 jekyll 本身感兴趣的同学可以看看 jekyll 源码: [https://github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
 
 ![jekyll logo](http://jekyllcn.com/img/logo-2x.png)
 
-### 2. Copy theme code
+### 2. 复制博客主题代码
 
-You can clone, download or fork this repo.
+可以直接 clone 、下载 或 fork 这个仓库的代码即可
 
-### 3. Change parameter
+### 3. 修改参数
 
-Mainly change the parameters at file `_config.yml` and use your own `favicon.ico`.
+主要修改 `_config.yml` 中的参数和自己的网站小图`favicon.ico`
 
-#### Basic info
+`_config.yml`文件中
 
-Shows at site header part.
+#### 基本信息
+
+主要用于网站头部header。
 
 ```yml
 # Site settings
-title: HyG
+title: 
 brief-intro: Front-end Dev Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://gaohaoyang.github.io" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 ```
 
-#### Link info
+#### 链接信息
 
-Mainly shows at the footer of the site.
+主要用于网站底部footer。
 
 ```yml
 # other links
-twitter_username: gaohaoyang126
-facebook_username: gaohaoyang.water
-github_username:  Gaohaoyang
-email: gaohaoyang126@126.com
-weibo_username: 3115521wh
-zhihu_username: gaohaoyang
-linkedIn_username: gaohaoyang
+twitter_username: 
+facebook_username: 
+github_username:  
+email: 
+weibo_username:
+zhihu_username: 
+linkedIn_username:
 dribbble_username:
-
-description_footer: 本站记录我前端之旅的沿途风景！
+description_footer: 
 ```
 
-#### Comments info
+#### 评论信息
 
-Get your own `short_name`:
+获取`short_name`的方法：
 
-Visit https://disqus.com/ or http://duoshuo.com/. And follow the prompts at the site.
+访问 https://disqus.com/ 或 http://duoshuo.com/ 根据提示操作即可。
 
 ```yml
 # comments
 # two ways to comment, only choose one, and use your own short name
-duoshuo_shortname: #hygblog
-disqus_shortname: xxxx
+# 两种评论插件，选一个就好了，使用自己的 short_name
+duoshuo_shortname: 
+disqus_shortname: 
 ```
 
-When you done, you can also see the comments info at disqus or duoshuo admin console.
+运行成功后，可以在 disqus 或 多说 的后台管理页看到相关信息。
 
-#### Statistical analysis info
+#### 统计信息
 
-Get Google Analytics id or Baidu Statistics id：
+获取 百度统计id 或 Google Analytics id 的方法：
 
-Visit https://www.google.com/analytics/ or http://tongji.baidu.com/. And follow the prompts at the site.
-
-Of course, if you don't want any statistical and analysis info, you can type nothing at id position.
+访问 http://tongji.baidu.com/ 或 https://www.google.com/analytics/ 根据提示操作即可。当然，如果不想添加统计信息，这两个参数可以不填。
 
 ```yml
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
-baidu_tongji_id: cf850xxxxxxxxxxxxxxxx
-google_analytics_id: UA-7xxxxxx-4 # google 分析追踪id
+baidu_tongji_id: 
+google_analytics_id: # google 分析追踪id
 ```
 
-When you done, you can see UV, PV, location etc. info at your own Google Analytics or Baidu Statistic console.
+成功后，进入自己的百度统计或 Google Analytics 后台管理，即可看到网站的访问量、访客等相关信息。
 
-### 4. Write post
+### 4. 写文章
 
-You can write posts at folder `_posts`. At the beginning of the post, you should declare layout、title、date、categories、tags、author(optional) info、mathjax(optional，click [here](https://www.mathjax.org/) for more detail about `Mathjax`).
+`_posts`目录下存放文章信息，文章头部注明 layout(布局)、title、date、categories、tags、author(可选)、mathjax(可选，点击[这里](https://www.mathjax.org/)查看更多关于`Mathjax`)，如下：
 
 ```
 ---
@@ -246,150 +233,61 @@ title:  "对这个 jekyll 博客主题的改版和重构"
 date:   2016-03-12 11:40:18 +0800
 categories: jekyll
 tags: jekyll 端口 markdown Foxit RubyGems HTML CSS
-author: Haoyang Gao
+author: 
 mathjax: true
 ---
 ```
 
-These follow code is for making contents.
+下面这两行代码为产生目录时使用
 ```
 * content
 {:toc}
 ```
 
-You can use 4 wraps as a excerpt separator. The words before separator as excerpt show in the index page. When you enter the post page, you can read full article.
+文章中存在的4次换行为摘要分割符，换行前的内容会以摘要的形式显示在主页Home上，进入文章页不影响。
 
-The wraps config is in the file `_config.yml`, as follows:
+换行符的设置见配置文件`_config.yml`的 excerpt，如下：
 
 ```yml
 # excerpt
 excerpt_separator: "\n\n\n\n"
 ```
 
-You should use markdown syntax to write article, just like write readme in github.
+使用 markdown 语法写文章。
 
-You can use 3 \`\`\` to write code block.
+代码风格与 GitHub 上 README 或 issue 中的一致。使用3个\`\`\`的方式。
 
-### 5. Local launch
+### 5. 本地运行
 
-use command:
+本地执行
 
 ```
 jekyll s
 ```
 
-Terminal shows:
+显示
 
 ```
-Configuration file: E:/GitWorkSpace/blog/_config.yml
-            Source: E:/GitWorkSpace/blog
-       Destination: E:/GitWorkSpace/blog/_site
+Configuration file: D:/MyBlog/DJC0412.github.io/_config.yml
+            Source: D:/MyBlog/DJC0412.github.io
+       Destination: D:/MyBlog/DJC0412.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating...
-                    done in 6.33 seconds.
+                    done in 1.023 seconds.
   Please add the following to your Gemfile to avoid polling for changes:
     gem 'wdm', '>= 0.1.0' if Gem.win_platform?
- Auto-regeneration: enabled for 'E:/GitWorkSpace/blog'
-Configuration file: E:/GitWorkSpace/blog/_config.yml
-    Server address: http://127.0.0.1:4000/
+ Auto-regeneration: enabled for 'D:/MyBlog/DJC0412.github.io'
+    Server address: http://127.0.0.1:4001/
   Server running... press ctrl-c to stop.
 ```
 
-Visit localhost:4000 to see your blog!!!
+在本地访问 localhost:4001 即可看到博客主页。
 
-### 6. Push to GitHub
+若正在使用全局代理，可能会报错502，关闭全局代理即可。
 
-If there is nothing wrong, push code to your github!
+### 6. 发布到 GitHub
 
-## Donate
-
-You can also donate me for a coffee, and I'll do better. Thanks.
-
-|                                                                     PayPal                                                                     |                                 Wechat Pay                                  |                                   Alipay                                    |
-|:----------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
-| [![PayPal](https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png)<br>Donate via PayPal ](https://www.paypal.me/gaohaoyang) | ![wechat](http://ww2.sinaimg.cn/large/7011d6cfjw1f3bkdw3bslj206z06q3z6.jpg) | ![alipay](http://ww2.sinaimg.cn/large/7011d6cfjw1f3bk8ikzoij20740743z5.jpg) |
-
-
-Thanks these friends!!!
-
-* 2017.05.25 received Wechat user ¥1.00
-* 2017.05.19 received 风之筝 ¥6.66
-* 2017.05.16 received 张驰 ¥6.00
-* 2017.05.03 received 希成 ¥6.66
-* 2017.04.24 received deezer ¥10.00
-* 2017.04.13 received Abraham Xiao ¥30.00
-* 2017.04.11 received Wechat user ¥4.00
-* 2017.04.01 received Elvin Zeng ¥6.66
-* 2017.03.13 received Wechat user ¥6.66
-* 2017.03.04 received 史莱姆 ¥9.90
-* 2017.03.02 received 梦想小熊 ¥6.66
-* 2017.02.27 received 夏友杰 ¥6.66
-* 2017.02.26 received 兰缘小妖 ¥10.00
-* 2017.02.25 received Wechat user ¥6.66
-* 2017.02.22 received Wechat user ¥6.66
-* 2017.02.15 received Wechat user ¥10.00
-* 2017.02.06 received Light ¥10.24
-* 2017.01.15 received Wechat user ¥6.66
-* 2016.12.17 received HitNoah ¥12.00
-* 2016.12.09 received 情融 ¥6.60
-* 2016.11.25 received Wechat user ¥6.66
-* 2016.11.16 received Wechat user ¥1.00
-* 2016.10.24 received 奇峰 ¥6.66
-* 2016.10.21 received 旭廷 ¥10.00
-* 2016.09.25 received 鑫 ¥6.66
-* 2016.08.25 received Erlend Aakre $2.50
-* 2016.08.10 received Wechat user ¥4.40
-* 2016.07.25 received 邓炳初 ¥6.66
-* 2016.07.11 received 彦风 ¥6.66
-* 2016.07.07 received Klci ¥2.50
-* 2016.05.08 received 1057 ¥10.57
-* 2016.05.07 received 吴林 ¥2
-* 2016.04.29 received 北归 ¥10
-* 2016.04.28 received 魏楚阳_Brian ¥2
-* 2016.04.28 received 薛彬 ¥8.8
-
-
-## Update Log
-
-### 2017.2.28
-
-- `[^]` fix smoothScroll bug in Tencent webview like wechat and qq.  [#22](https://github.com/Gaohaoyang/gaohaoyang.github.io/issues/22), [#48](https://github.com/Gaohaoyang/gaohaoyang.github.io/issues/48)
-
-### 2016.6.20
-
-* `[+]` Add next post and previous post link in post page.
-* `[^]` Change the sort of font-family to avoid full-width half-width characters mistake.
-* `[^]` Fix bug in tags cloud when division by zero. [#26](https://github.com/Gaohaoyang/gaohaoyang.github.io/issues/26), [#28](https://github.com/Gaohaoyang/gaohaoyang.github.io/issues/28), [#30](https://github.com/Gaohaoyang/gaohaoyang.github.io/issues/30)
-
-### 2016.5.11 v2.0.1
-
-* `[^]` Optimized code, Extracting common code to `comments.html`
-* `[+]` Add Google Analysis and Baidu Statistics
-* `[+]` Update README, add usage
-* `[+]` Add `favicon.ico`
-* `[^]` Fix bug at contents
-* `[^]` Change the content scroll bar CSS style（Only for `webkit` browser kernel）
-* `[^]` Change tag a color at demo page
-* `[+]` Add busuanzi counter, show the views count at footer
-* `[+]` Add back to top button
-
-### 2016.4.27 v2.0.0
-
-* `[^]` Rewrite all codes based on jekyll 3.1.2
-* `[+]` Add excerpt at index page
-* `[+]` Add recently post, categories and tags cloud at index page
-* `[+]` Add light shadow at navbar
-* `[+]` Add archives, categories, tags page
-* `[+]` Add collections page
-* `[+]` Add comments plugin with disqus or duoshuo
-* `[+]` Mobile Adaptation
-* `[+]` Fix post contents to the right side while scrolling page
-* `[+]` Fix footer at the bottom when page height is smaller than window height
-* `[^]` Use github flavored markdown to write code block(Fenced code blocks)
-* `[^]` Rewrite the demo page with Masonry
-* `[-]` Remove jQuery and BootStrap
-
-About my old blog theme, I won't maintain any more. And I put the code at  [Gaohaoyang/old-blog](https://github.com/Gaohaoyang/old-blog).
+没什么问题，推送到自己的博客仓库即可。
 
 ## License
 

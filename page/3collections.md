@@ -43,7 +43,7 @@ type: page
     - 这个功能更强大一点，能清楚的区分出贪婪和懒惰正则。
 - [http://regexr.com/](http://regexr.com/)
 - [google fonts](https://fonts.google.com/)
-  - [Google Fonts 加速代理](https://fengmk2.com/blog/2016/google-fonts-mirror)
+- [Google Fonts 加速代理](https://fengmk2.com/blog/2016/google-fonts-mirror)
 
 ## 编程语言
 
