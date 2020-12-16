@@ -5,23 +5,9 @@
     <description></description>
     <link>http://localhost:4001/</link>
     <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 Dec 2020 14:12:18 +0800</pubDate>
-    <lastBuildDate>Wed, 16 Dec 2020 14:12:18 +0800</lastBuildDate>
+    <pubDate>Wed, 16 Dec 2020 18:01:24 +0800</pubDate>
+    <lastBuildDate>Wed, 16 Dec 2020 18:01:24 +0800</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
-    
-      <item>
-        <title>MarkDown格式测试文档</title>
-        <description>文章外部可见文本</description>
-        <pubDate>Tue, 15 Dec 2020 19:35:54 +0800</pubDate>
-        <link>http://localhost:4001/2020/12/15/MarkDown/</link>
-        <guid isPermaLink="true">http://localhost:4001/2020/12/15/MarkDown/</guid>
-        
-        <category>标签</category>
-        
-        
-        <category>分类</category>
-        
-      </item>
     
       <item>
         <title>JAVA学习笔记（二）</title>
@@ -48,20 +34,6 @@
         
         
         <category>JAVA学习笔记</category>
-        
-      </item>
-    
-      <item>
-        <title>hello jekyll!</title>
-        <description>当年创建 jekyll 时默认的一篇文章，没什么意义，我也一直没删除，留个纪念吧。</description>
-        <pubDate>Tue, 10 Feb 2015 23:14:54 +0800</pubDate>
-        <link>http://localhost:4001/2015/02/10/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4001/2015/02/10/welcome-to-jekyll/</guid>
-        
-        <category>jekyll</category>
-        
-        
-        <category>jekyll</category>
         
       </item>
     
