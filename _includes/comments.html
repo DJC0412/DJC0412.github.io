@@ -66,7 +66,7 @@
 </script>  -->
 
 <!--Valine 的核心代码库-->
-<script src="https://djc0412.coding.net/p/djc0412/d/djc0412/git/tree/master/_includes/Valine.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <div id="comment"></div>
 <span id="comment-count"></span>
 
@@ -77,8 +77,6 @@
         el: comment_el,				// 评论区元素（要求div）
         count_el: comment_count_el,    // 评论计数元素（要求span）
         lang: 'zh-cn',							   // 语言（zh-cn或en）
-        emoticon_url: 'https://cloud.panjunwen.com/alu', // 表情包根目录（自行解决文件托管）
-        emoticon_list: ["吐.png", "狂汗.png", "不说话.png"], // 表情包文件列表
         app_id: 'oJIvfW8j9rMxyKyKLepFFeTJ-gzGzoHsz',			    										   	
         app_key: 's5TrmV8dex3JKzyDdGSPn1Uk',    										      
         placeholder: 'Write a comment',  // 提示符

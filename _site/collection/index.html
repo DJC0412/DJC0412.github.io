@@ -190,6 +190,7 @@
   <li><a href="http://regexr.com/">http://regexr.com/</a></li>
   <li><a href="https://fonts.google.com/">google fonts</a></li>
   <li><a href="https://fengmk2.com/blog/2016/google-fonts-mirror">Google Fonts 加速代理</a></li>
+  <li><a href="https://valine.js.org/quickstart.html">Valine 评论工具</a></li>
 </ul>
 
 <h2 id="编程语言">编程语言</h2>
@@ -393,7 +394,7 @@
 </script>  -->
 
 <!--Valine 的核心代码库-->
-<script src="https://djc0412.coding.net/p/djc0412/d/djc0412/git/tree/master/_includes/Valine.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 <div id="comment"></div>
 <p><span id="comment-count"></span></p>
@@ -405,8 +406,6 @@
         el: comment_el,				// 评论区元素（要求div）
         count_el: comment_count_el,    // 评论计数元素（要求span）
         lang: 'zh-cn',							   // 语言（zh-cn或en）
-        emoticon_url: 'https://cloud.panjunwen.com/alu', // 表情包根目录（自行解决文件托管）
-        emoticon_list: ["吐.png", "狂汗.png", "不说话.png"], // 表情包文件列表
         app_id: 'oJIvfW8j9rMxyKyKLepFFeTJ-gzGzoHsz',			    										   	
         app_key: 's5TrmV8dex3JKzyDdGSPn1Uk',    										      
         placeholder: 'Write a comment',  // 提示符
