@@ -42,7 +42,7 @@ table tbody tr:nth-of-type(2n) { background-color: #e5eaed; }
 
 table td { padding: 2px 10px; }
 
-p { margin: 0 0 10px; }
+p { margin: 2px 0; }
 
 img { max-width: 100%; }
 
@@ -173,7 +173,7 @@ header .wrapper nav ul li > .active { color: #fff; background-color: #000; box-s
 @media screen and (max-width: 770px) { .page { width: 95%; } .page .left { width: 100%; float: left; padding: 10px 14px; font-size: 14px; } .page .left > h1 { font-size: 25px; margin-bottom: -10px; } .page .left ul { padding-left: 20px; } .page .left ul > h2 { font-size: 20px; margin-left: -20px; } .page .left ul li { margin: 20px 0; } .page .left ul li time { display: block; width: auto; } .page .left ul li .title { display: block; font-size: 16px; } .page .left ul li .categories { font-size: 12px; padding-left: 0; padding-right: 10px; } .page .anchor { display: block; visibility: visible; position: fixed; top: 76px; right: 2.5%; padding: 5px 10px; color: #333; font-size: 15px; background-color: #f8f8fd; box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3), 0 0 30px rgba(10, 10, 0, 0.1) inset; opacity: 0.7; transition: 0.2s cubic-bezier(0.5, 0.1, 0.51, 1.38); } .page .anchor-hide { opacity: 0; visibility: hidden; } .page .right { visibility: hidden; position: fixed; float: none; width: auto; max-width: 95%; padding: 0; top: 76px; right: 2.5%; opacity: 0; transform-origin: 100% 0; transform: scale(0.1); transition: 0.2s cubic-bezier(0.5, 0.1, 0.51, 1.38); } .page .right-show { z-index: 999; visibility: visible; opacity: 1; transform: scale(1); } .page .right-show .content-ul { margin-bottom: 0; } .page .right-show .content-ul > li:last-of-type { margin-bottom: 16px; } }
 
 /** Syntax highlighting styles */
-code { padding: 1px 4px; margin: 0 2px; font-size: 90%; border-radius: 3px; color: #000; background-color: rgba(0, 0, 0, 0.06); border: 1px solid #d7d0d2; font-family: Monaco,Menlo,"Microsoft YaHei Mono",Consolas,"Courier New",monospace,sans-serif; }
+code { padding: 1px 4px; margin: 0 2px; font-size: 90%; border-radius: 3px; color: #000; background-color: #61616126; border: 1px solid #8790ff6e; font-family: Monaco,Menlo,"Microsoft YaHei Mono",Consolas,"Courier New",monospace,sans-serif; }
 
 pre { margin: 0px 0; padding: 8px 12px; word-wrap: break-word; /* IE 5.5-7 */ white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */ white-space: pre-wrap; /* current browsers */ }
 
