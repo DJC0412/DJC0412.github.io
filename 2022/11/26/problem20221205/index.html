@@ -20,20 +20,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>Notes：统计和规定时间的交集 - ove's blog</title>
+  <title>统计和规定时间的交集 - ove's blog</title>
 
   
-    <meta name="description" content="需求定义最近写代码遇到一个需求 夜间停留时间统计用户的时间段是%Y-%m-%d %H:%M:%S形式，需要统计这段时间和01:00 ~ 06:00的交集，即，假设用户时间段是2022-02-02 05:30 ~ 2022-02-02 06:30，那么交集即为30min。如果用户时间段是2022-02-02 05:30 ~ 2022-02-03 06:30，那么交集即为5h30min。  上网搜了一">
-<meta property="og:type" content="website">
+    <meta name="description" content="统计跨天时间段和夜间时间段（01:00 ~ 06:00）的交集">
+<meta property="og:type" content="article">
 <meta property="og:title" content="统计和规定时间的交集">
-<meta property="og:url" content="http://gisove.com/notes/problems_slove/problem20221205.html">
+<meta property="og:url" content="http://gisove.com/2022/11/26/problem20221205/index.html">
 <meta property="og:site_name" content="ove&#39;s blog">
-<meta property="og:description" content="需求定义最近写代码遇到一个需求 夜间停留时间统计用户的时间段是%Y-%m-%d %H:%M:%S形式，需要统计这段时间和01:00 ~ 06:00的交集，即，假设用户时间段是2022-02-02 05:30 ~ 2022-02-02 06:30，那么交集即为30min。如果用户时间段是2022-02-02 05:30 ~ 2022-02-03 06:30，那么交集即为5h30min。  上网搜了一">
+<meta property="og:description" content="统计跨天时间段和夜间时间段（01:00 ~ 06:00）的交集">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-01T15:36:32.177Z">
-<meta property="article:modified_time" content="2023-01-01T15:36:32.177Z">
+<meta property="article:published_time" content="2022-11-26T09:24:29.840Z">
+<meta property="article:modified_time" content="2023-01-09T09:40:02.345Z">
 <meta property="article:author" content="ove of rsgis">
-<meta property="article:tag" content="GIS">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
   
   
@@ -66,24 +66,22 @@
 
 
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='wiki'>
+    <aside class='l_left' layout='post'>
     
 
   
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/5c04a48c5914fb20.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">ove's blog</div><div class="sub cap">Memento Mori.</div></a></div>
 
-<nav class="menu dis-select"><a class="nav-item" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item active" href="/notes/">便笺</a><a class="nav-item" href="/about/">关于</a></nav>
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">便笺</a><a class="nav-item" href="/about/">关于</a></nav>
 </header>
 
 
 <div class="widgets">
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/notes/problems_slove/" placeholder="在 /notes/problems_slove/ 中搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-
-
-<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">日常问题解决</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/problems_slove/blobsIndexs.html"><span class="toc-text">blobs表情包索引</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/notes/problems_slove/problem20221205.html"><span class="toc-text">统计和规定时间的交集</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E5%AE%9A%E4%B9%89"><span class="toc-text">需求定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF"><span class="toc-text">解决思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E4%BB%A3%E7%A0%81"><span class="toc-text">解决代码</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">统计和规定时间的交集</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E5%AE%9A%E4%B9%89"><span class="toc-text">需求定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF"><span class="toc-text">解决思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E4%BB%A3%E7%A0%81"><span class="toc-text">解决代码</span></a></li></ol></div></div></widget>
 
 
 
@@ -97,27 +95,33 @@
 
       
 
-  
-  
 
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">日常问题解决</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-11-26T09:24:29.840Z">2022-11-26</time></div></div>
 
-  <article class='md-text content wiki'>
-  <h1 class="article-title"><span>统计和规定时间的交集</span></h1>
-  <h2 id="需求定义"><a href="#需求定义" class="headerlink" title="需求定义"></a>需求定义</h2><p>最近写代码遇到一个需求</p>
+<article class='md-text content post'>
+<h1 class="article-title"><span>统计和规定时间的交集</span></h1>
+<p>统计跨天时间段和夜间时间段（<a class="tag-plugin tag" color="light">01:00 ~ 06:00</a>）的交集</p>
+<span id="more"></span>
+
+<h2 id="需求定义"><a href="#需求定义" class="headerlink" title="需求定义"></a>需求定义</h2><p>最近写代码遇到一个需求</p>
 <div class="tag-plugin note" ><div class="title"><strong>夜间停留时间统计</strong></div><div class="body"><p>用户的时间段是<a class="tag-plugin tag" color="light">%Y-%m-%d %H:%M:%S</a>形式，需要统计这段时间和<a class="tag-plugin tag" color="light">01:00 ~ 06:00</a>的交集，即，假设用户时间段是<a class="tag-plugin tag" color="light">2022-02-02 05:30 ~ 2022-02-02 06:30</a>，那么交集即为30min。如果用户时间段是<a class="tag-plugin tag" color="light">2022-02-02 05:30 ~ 2022-02-03 06:30</a>，那么交集即为5h30min。</p></div></div>
 
 <p>上网搜了一下，大部分的方案都是给定了具体日期，例如求<a class="tag-plugin tag" color="light">2022-02-02 05:30 ~ 2022-02-02 06:30</a>和<a class="tag-plugin tag" color="light">2022-02-02 06:00 ~ 2022-02-02 08:30</a>这两个时间段的交集，而没有忽略日期，单纯考虑<a class="tag-plugin tag" color="light">%H:%M:%S</a>的交集统计。</p>
 <h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><p>思路其实也很简单，就是统计每天和<a class="tag-plugin tag" color="light">01:00 ~ 06:00</a>的交集，例如<a class="tag-plugin tag" color="light">2022-02-02 05:30 ~ 2022-02-03 06:30</a>，那就是先统计<a class="tag-plugin tag" color="light">2022-02-02</a>和<a class="tag-plugin tag" color="light">01:00 ~ 06:00</a>的交集，再统计<a class="tag-plugin tag" color="light">2022-02-03</a>和<a class="tag-plugin tag" color="light">01:00 ~ 06:00</a>的交集，最终结果以秒数统计。</p>
-<h2 id="解决代码"><a href="#解决代码" class="headerlink" title="解决代码"></a>解决代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计和规定时间的交集</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">timeIntersection</span>(<span class="params">time2JudgeStart,time2JudgeEnd,ruleHourStart,ruleHourEnd</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    time2JudgeStart - 用户时间段开始时间    - string &#x27;%Y-%m-%d %H:%M:%S&#x27;</span></span><br><span class="line"><span class="string">    time2JudgeEnd   - 用户时间段停止时间    - string &#x27;%Y-%m-%d %H:%M:%S&#x27;</span></span><br><span class="line"><span class="string">    ruleHourStart   - 求交集的规定开始时间(小时)    - int</span></span><br><span class="line"><span class="string">    ruleHourStart   - 求交集的规定停止时间(小时)    - int</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">    intersectionSum - 交集统计时间(秒)  - int</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    time2JudgeStart = datetime.strptime(time2JudgeStart, <span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)</span><br><span class="line">    time2JudgeEnd = datetime.strptime(time2JudgeEnd, <span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)</span><br><span class="line">    startDay = time2JudgeStart.date()</span><br><span class="line">    endDay = time2JudgeEnd.date()</span><br><span class="line">    diffDays = (endDay - startDay).days</span><br><span class="line">    intersectionSum = <span class="number">0</span></span><br><span class="line">    <span class="comment">#分别计算每天的交集</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(diffDays+<span class="number">1</span>):</span><br><span class="line">        timeDay = startDay+timedelta(days=i)</span><br><span class="line">        timeStart = datetime(timeDay.year, timeDay.month, timeDay.day, ruleHourStart, <span class="number">0</span>)</span><br><span class="line">        timeEnd = datetime(timeDay.year, timeDay.month, timeDay.day, ruleHourEnd, <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">if</span>(time2JudgeEnd  &lt;= timeStart):<span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span>(time2JudgeStart &gt;= timeEnd):<span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">if</span>(time2JudgeEnd &lt; timeEnd):</span><br><span class="line">            <span class="keyword">if</span>(time2JudgeStart &lt; timeStart):intersectionSum = intersectionSum + (time2JudgeEnd-timeStart).total_seconds()</span><br><span class="line">            <span class="keyword">else</span>:intersectionSum = intersectionSum + (time2JudgeEnd-time2JudgeStart).total_seconds()</span><br><span class="line">        <span class="keyword">if</span>(time2JudgeEnd &gt; timeEnd):</span><br><span class="line">            <span class="keyword">if</span>(time2JudgeStart &lt; timeStart):intersectionSum = intersectionSum + (timeEnd-timeStart).total_seconds()</span><br><span class="line">            <span class="keyword">else</span>:intersectionSum = intersectionSum + (timeEnd-time2JudgeStart).total_seconds()</span><br><span class="line">    <span class="keyword">return</span> intersectionSum</span><br></pre></td></tr></table></figure>
-
-  
+<h2 id="解决代码"><a href="#解决代码" class="headerlink" title="解决代码"></a>解决代码</h2><div class="tag-plugin note" child="codeblock"><div class="body"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计和规定时间的交集</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">timeIntersection</span>(<span class="params">time2JudgeStart,time2JudgeEnd,ruleHourStart,ruleHourEnd</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    time2JudgeStart - 用户时间段开始时间    - string &#x27;%Y-%m-%d %H:%M:%S&#x27;</span></span><br><span class="line"><span class="string">    time2JudgeEnd   - 用户时间段停止时间    - string &#x27;%Y-%m-%d %H:%M:%S&#x27;</span></span><br><span class="line"><span class="string">    ruleHourStart   - 求交集的规定开始时间(小时)    - int</span></span><br><span class="line"><span class="string">    ruleHourStart   - 求交集的规定停止时间(小时)    - int</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">    intersectionSum - 交集统计时间(秒)  - int</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    time2JudgeStart = datetime.strptime(time2JudgeStart, <span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)</span><br><span class="line">    time2JudgeEnd = datetime.strptime(time2JudgeEnd, <span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)</span><br><span class="line">    startDay = time2JudgeStart.date()</span><br><span class="line">    endDay = time2JudgeEnd.date()</span><br><span class="line">    diffDays = (endDay - startDay).days</span><br><span class="line">    intersectionSum = <span class="number">0</span></span><br><span class="line">    <span class="comment">#分别计算每天的交集</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(diffDays+<span class="number">1</span>):</span><br><span class="line">        timeDay = startDay+timedelta(days=i)</span><br><span class="line">        timeStart = datetime(timeDay.year, timeDay.month, timeDay.day, ruleHourStart, <span class="number">0</span>)</span><br><span class="line">        timeEnd = datetime(timeDay.year, timeDay.month, timeDay.day, ruleHourEnd, <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">if</span>(time2JudgeEnd  &lt;= timeStart):<span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span>(time2JudgeStart &gt;= timeEnd):<span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">if</span>(time2JudgeEnd &lt; timeEnd):</span><br><span class="line">            <span class="keyword">if</span>(time2JudgeStart &lt; timeStart):intersectionSum = intersectionSum + (time2JudgeEnd-timeStart).total_seconds()</span><br><span class="line">            <span class="keyword">else</span>:intersectionSum = intersectionSum + (time2JudgeEnd-time2JudgeStart).total_seconds()</span><br><span class="line">        <span class="keyword">if</span>(time2JudgeEnd &gt; timeEnd):</span><br><span class="line">            <span class="keyword">if</span>(time2JudgeStart &lt; timeStart):intersectionSum = intersectionSum + (timeEnd-timeStart).total_seconds()</span><br><span class="line">            <span class="keyword">else</span>:intersectionSum = intersectionSum + (timeEnd-time2JudgeStart).total_seconds()</span><br><span class="line">    <span class="keyword">return</span> intersectionSum</span><br></pre></td></tr></table></figure></div></div>
 
 
-  </article>
-  
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/notes/problems_slove/blobsIndexs.html">blobs表情包索引</a></div><div class="item" id="next"></div></section></div>
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
 
-  
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2023/01/08/problem20230108/">数据库连接超时</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2022/11/25/MarkDownTest/">MarkDown格式测试文档</a></div></section></div>
+
+
+
+
+
 
   <div class='related-wrap md-text reveal' id="comments">
     <section class='header cmt-title cap theme'>
@@ -130,7 +134,6 @@
 
     </section>
   </div>
-
 
 
 
